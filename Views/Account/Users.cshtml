@@ -1,41 +1,28 @@
 @model List<User>
 
-@if (Model.Count == null || Model.Count < 1)
-{
-    <div class="alert alert-danger" role="alert">
-    <h4 class="alert-heading">No users ☹️</h4>
-    <p>There are no users yet.</p>
-    <hr>
-    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-</div>
-}
-else
-{
-    <div class="row mx-4 mt-5">
-        <table class="table">
+
+<h1>Welcome the DB</h1>
+
+<table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Full Name</th>
-      <th scope="col">Phone</th>
-      <th scope="col">User Name</th>
-      <th scope="col">B-day</th>
+      <th scope="col">Birthdate</th>
+      <th scope="col">Username</th>
       <th scope="col">Email</th>
+      <th scope="col">Phone Number</th>
     </tr>
   </thead>
+  @foreach (var user in Model)
+  {
+    <tbody>
+        <tr>
+        <td>@user.UserName</td>
+        <td>@user.Birthdate</td>
+        <td>@user.UserName</td>
+        <td>@user.Email</td>
+        <td>@user.PhoneNumber</td>
+        </tr>
+    </tbody>     
+  }
 </table>
-    @foreach(var user in Model)
-    {
-        <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>@user.Fullname</td>
-            <td>@user.PhoneNumber</td>
-            <td>@user.UserName< /td>
-            <td>@user.Birthdate</td>
-            <td>@user.Email</td>
-            </tr>
-        </tbody>
-    }
-</div>
-}
