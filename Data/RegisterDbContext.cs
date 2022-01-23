@@ -15,7 +15,6 @@ namespace register.Data;
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
-            modelBuilder.Entity<User>().HasIndex(u => u.Phone).IsUnique();
+             modelBuilder.Entity<User>().HasIndex(i => i.PhoneNumber).IsUnique();
         }
     }

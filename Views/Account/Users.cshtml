@@ -1,5 +1,4 @@
-@model List<User>
-
+@model register.ViewModels.UsersViewModel
 
 <h1>Welcome the DB</h1>
 
@@ -13,15 +12,15 @@
       <th scope="col">Phone Number</th>
     </tr>
   </thead>
-  @foreach (var user in Model)
+  @foreach (var user in Model.Users)
   {
     <tbody>
         <tr>
-        <td>@user.UserName</td>
+        <td>@user.Fullname</td>
         <td>@user.Birthdate</td>
-        <td>@user.UserName</td>
+        <td>@user.Username</td>
         <td>@user.Email</td>
-        <td>@user.PhoneNumber</td>
+        <td>@user.Phone</td>
         </tr>
     </tbody>     
   }

@@ -37,9 +37,9 @@ public class SignupViewModel : IValidatableObject
     public string ConfirmPassword { get; set; }
 
      [Display(Name = "Eslab qolish")]
-    public bool RememberMe { get; set; }
+
     public string ReturnUrl { get; set; }
-    public string Username { get; set; }
+
     
     
     
